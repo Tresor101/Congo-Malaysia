@@ -18,6 +18,7 @@ const sections = [
   { id: 'events-section', file: 'sections/events.html' },
   { id: 'news-section', file: 'sections/news.html' },
   { id: 'gallery-section', file: 'sections/gallery.html' },
+  { id: 'committee-section', file: 'sections/committee.html' },
   { id: 'contact-section', file: 'sections/contact.html' }
 ];
 
