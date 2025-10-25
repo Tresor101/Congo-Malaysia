@@ -1,175 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Basic -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Congolese Community in Malaysia</title>
-  
+  <meta name="description" content="Congolese Community in Malaysia – events, news, resources, and connections for our diaspora." />
+  <meta name="theme-color" content="#0f3460" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Congolese Community in Malaysia" />
+  <meta property="og:description" content="Events, news, and connections for Congolese in Malaysia." />
+  <meta property="og:image" content="images/flags.jpg" />
+
   <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="images/flags.jpg">
-  <link rel="shortcut icon" type="image/jpeg" href="images/flags.jpg">
-  <link rel="apple-touch-icon" href="images/flags.jpg">
-  
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="icon" type="image/jpeg" href="images/flags.jpg" />
+  <link rel="apple-touch-icon" href="images/flags.jpg" />
+
+  <!-- Styles: Bootstrap (for header/footer components) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Minimal page styles -->
+  <style>
+    html, body { height: 100%; }
+    body { display: flex; flex-direction: column; }
+    main { flex: 1 0 auto; }
+
+    /* Skip link for accessibility */
+    .skip-to-content {
+      position: absolute; left: -999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+    }
+    .skip-to-content:focus {
+      position: fixed; left: 1rem; top: 1rem; width: auto; height: auto; z-index: 1100;
+      background: #0f3460; color: #fff; padding: .5rem .75rem; border-radius: .5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,.25);
+    }
+
+    /* Scroll-to-top */
+    #scroll-to-top {
+      position: fixed; right: 24px; bottom: 24px; width: 50px; height: 50px;
+      border: 0; border-radius: 50%; cursor: pointer; z-index: 1050;
+      display: grid; place-items: center; color: #fff;
+      background: linear-gradient(135deg, #007bff, #00d4ff);
+      box-shadow: 0 6px 20px rgba(0,123,255,.35);
+      opacity: 0; visibility: hidden; transform: translateY(12px);
+      transition: all .3s ease;
+    }
+    #scroll-to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+    #scroll-to-top:hover { transform: translateY(-4px); }
+
+    /* Section scaffolding (optional) */
+    section.page-section { scroll-margin-top: 90px; }
+
+    /* Loading spinner for sections */
+    .section-loading {
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .spinner-border-custom {
+      width: 3rem;
+      height: 3rem;
+      border-width: 0.3em;
+    }
+  </style>
 </head>
 <body>
-  <!-- Header -->
-  <div id="header-placeholder"></div>
+  <a class="skip-to-content" href="#main-content">Skip to content</a>
 
-  <!-- Main Content -->
-  <main>
-    <!-- Hero Section -->
-    <div id="hero-section"></div>
+  <!-- Header include -->
+  <div id="header-placeholder" role="banner" aria-label="Site header"></div>
 
-    <!-- About Section -->
-    <div id="about-section"></div>
+  <!-- Main -->
+  <main id="main-content" tabindex="-1">
+    <!-- Hero -->
+    <section id="hero-section" class="page-section">
+      <div class="section-loading">
+        <div class="spinner-border text-primary spinner-border-custom" role="status">
+          <span class="visually-hidden">Loading hero...</span>
+        </div>
+      </div>
+    </section>
 
-    <!-- Events Section -->
-    <div id="events-section"></div>
+    <!-- About -->
+    <section id="about-section" class="page-section">
+      <div class="section-loading">
+        <div class="spinner-border text-primary spinner-border-custom" role="status">
+          <span class="visually-hidden">Loading about...</span>
+        </div>
+      </div>
+    </section>
 
-    <!-- News Section -->
-    <div id="news-section"></div>
+    <!-- Events -->
+    <section id="events-section" class="page-section">
+      <div class="section-loading">
+        <div class="spinner-border text-primary spinner-border-custom" role="status">
+          <span class="visually-hidden">Loading events...</span>
+        </div>
+      </div>
+    </section>
 
-    <!-- Gallery Section -->
-    <div id="gallery-section"></div>
-    
-    <!-- Committee Section -->
-    <div id="committee-section"></div>
+    <!-- News -->
+    <section id="news-section" class="page-section">
+      <div class="section-loading">
+        <div class="spinner-border text-primary spinner-border-custom" role="status">
+          <span class="visually-hidden">Loading news...</span>
+        </div>
+      </div>
+    </section>
 
-    <!-- Contact Section 
-    <div id="contact-section"></div>-->
+    <!-- Gallery -->
+    <section id="gallery-section" class="page-section">
+      <div class="section-loading">
+        <div class="spinner-border text-primary spinner-border-custom" role="status">
+          <span class="visually-hidden">Loading gallery...</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Committee -->
+    <section id="committee-section" class="page-section">
+      <div class="section-loading">
+        <div class="spinner-border text-primary spinner-border-custom" role="status">
+          <span class="visually-hidden">Loading committee...</span>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer -->
-  <div id="footer-placeholder"></div>
+  <!-- Footer include -->
+  <div id="footer-placeholder" role="contentinfo" aria-label="Site footer"></div>
 
-  <!-- Scroll to Top Button -->
-  <button id="scroll-to-top" class="scroll-to-top-btn" aria-label="Scroll to top" title="Back to top">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Scroll-to-top -->
+  <button id="scroll-to-top" aria-label="Scroll to top" title="Back to top">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <polyline points="18 15 12 9 6 15"></polyline>
     </svg>
   </button>
 
   <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="main.js"></script>
-
-  <!-- Scroll to Top Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
   <script>
-    // Scroll to Top functionality
-    const scrollToTopBtn = document.getElementById('scroll-to-top');
-    
-    // Show/hide button based on scroll position
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 300) {
-        scrollToTopBtn.classList.add('show');
-      } else {
-        scrollToTopBtn.classList.remove('show');
-      }
-    });
-    
-    // Scroll to top on click
-    scrollToTopBtn.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+    // Universal section loader
+    (function() {
+      const loadSection = async (url, sectionId, fallbackMsg) => {
+        const mount = document.querySelector(`#${sectionId}`);
+        if (!mount) return;
+
+        try {
+          const res = await fetch(url, { cache: 'no-cache' });
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          const html = await res.text();
+
+          const wrapper = document.createElement('div');
+          wrapper.innerHTML = html;
+
+          // Move any <style> blocks from the fetched file into <head>
+          wrapper.querySelectorAll('style').forEach(style => document.head.appendChild(style));
+
+          // Use the fetched section if it has matching ID, otherwise inject raw HTML
+          const fetchedSection = wrapper.querySelector(`#${sectionId}`) || wrapper.firstElementChild;
+          if (fetchedSection) {
+            mount.replaceWith(fetchedSection);
+          } else {
+            mount.innerHTML = html;
+          }
+        } catch (e) {
+          console.error(`${url} load failed:`, e);
+          mount.innerHTML = `
+            <div class="container py-5">
+              <p class="text-muted text-center">${fallbackMsg || 'Section is unavailable.'}</p>
+            </div>
+          `;
+        }
+      };
+
+      const loadInto = async (url, el) => {
+        try {
+          const res = await fetch(url, { cache: 'no-cache' });
+          if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
+          el.innerHTML = await res.text();
+        } catch (e) {
+          console.error('Include failed:', url, e);
+        }
+      };
+
+      document.addEventListener('DOMContentLoaded', async () => {
+        // Load header & footer
+        await Promise.all([
+          loadInto('./header.html', document.getElementById('header-placeholder')),
+          loadInto('./footer.html', document.getElementById('footer-placeholder')),
+        ]);
+
+        // Load all sections
+        await Promise.all([
+          loadSection('./hero.html', 'hero-section', 'Hero section is unavailable.'),
+          loadSection('./about.html', 'about-section', 'About section is unavailable.'),
+          loadSection('./events.html', 'events-section', 'Events section is unavailable.'),
+          loadSection('./news.html', 'news-section', 'News section is unavailable.'),
+          loadSection('./gallery.html', 'gallery-section', 'Gallery section is unavailable.'),
+          loadSection('./committee.html', 'committee-section', 'Committee section is unavailable.'),
+        ]);
       });
-    });
+
+      // Scroll-to-top logic
+      const btn = document.getElementById('scroll-to-top');
+      const toggleBtn = () => {
+        const y = window.pageYOffset || document.documentElement.scrollTop;
+        btn.classList.toggle('show', y > 300);
+      };
+      window.addEventListener('scroll', toggleBtn, { passive: true });
+      btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+      toggleBtn();
+    })();
   </script>
 
-  <!-- Scroll to Top Button Styles -->
-  <style>
-    .scroll-to-top-btn {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      width: 50px;
-      height: 50px;
-      background: linear-gradient(135deg, #007bff, #00d4ff);
-      color: white;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
-      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(20px);
-      z-index: 1000;
-    }
-
-    .scroll-to-top-btn.show {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-
-    .scroll-to-top-btn:hover {
-      background: linear-gradient(135deg, #0056b3, #007bff);
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0, 123, 255, 0.6);
-    }
-
-    .scroll-to-top-btn:active {
-      transform: translateY(-2px);
-    }
-
-    .scroll-to-top-btn svg {
-      transition: transform 0.3s ease;
-    }
-
-    .scroll-to-top-btn:hover svg {
-      transform: translateY(-3px);
-      animation: bounce 0.6s ease-in-out infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% {
-        transform: translateY(-3px);
-      }
-      50% {
-        transform: translateY(-8px);
-      }
-    }
-
-    /* Mobile responsive */
-    @media (max-width: 768px) {
-      .scroll-to-top-btn {
-        width: 45px;
-        height: 45px;
-        bottom: 20px;
-        right: 20px;
-      }
-
-      .scroll-to-top-btn svg {
-        width: 20px;
-        height: 20px;
-      }
-    }
-
-    /* Accessibility - Reduced motion */
-    @media (prefers-reduced-motion: reduce) {
-      .scroll-to-top-btn,
-      .scroll-to-top-btn svg {
-        transition: none !important;
-        animation: none !important;
-      }
-
-      .scroll-to-top-btn:hover svg {
-        animation: none !important;
-      }
-    }
-
-    /* Focus state for accessibility */
-    .scroll-to-top-btn:focus {
-      outline: 3px solid #007bff;
-      outline-offset: 3px;
-    }
-  </style>
+  <noscript>
+    <div class="alert alert-warning text-center m-0" role="alert">
+      JavaScript is disabled. Header/footer includes and smooth scrolling are limited.
+    </div>
+  </noscript>
 </body>
 </html>

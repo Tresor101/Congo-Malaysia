@@ -1,0 +1,241 @@
+<!-- Improved, more responsive committee.html -->
+<section id="committee-section" class="py-5 bg-light" aria-labelledby="committee-heading">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 id="committee-heading" class="mb-3">Our Committee</h2>
+      <p class="lead">Meet the dedicated team leading the Congolese community in Malaysia from 2025 to 2027.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Member template: copy / edit for each person -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm committee-card" tabindex="0" aria-labelledby="member-1-name">
+          <figure class="card-image" aria-hidden="true">
+            <img src="../images/Hutu.jpg"
+                 alt="Hutu — President"
+                 loading="lazy"
+                 decoding="async"
+                 width="800" height="600">
+          </figure>
+
+          <div class="card-body">
+            <img class="member-avatar" src="../images/Hutu.jpg" alt="" aria-hidden="true" width="96" height="96">
+            <h3 id="member-1-name" class="card-title mb-1">Gue Hutu</h3>
+            <p class="role text-muted mb-2">President</p>
+
+            <div class="social-links" aria-label="President social links">
+              <!-- Add links when available -->
+              <a href="#" class="visually-hidden">No social links</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm committee-card" tabindex="0" aria-labelledby="member-2-name">
+          <figure class="card-image" aria-hidden="true">
+            <img src="../images/DC.jpg" alt="DC — Vice President" loading="lazy" decoding="async" width="800" height="600">
+          </figure>
+
+          <div class="card-body">
+            <img class="member-avatar" src="../images/DC.jpg" alt="" aria-hidden="true" width="96" height="96">
+            <h3 id="member-2-name" class="card-title mb-1">DC</h3>
+            <p class="role text-muted mb-2">Vice President</p>
+
+            <div class="social-links" aria-label="Vice President social links"></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm committee-card" tabindex="0" aria-labelledby="member-3-name">
+          <figure class="card-image" aria-hidden="true">
+            <img src="../images/tresor.jpg" alt="Trésor — Secretary" loading="lazy" decoding="async" width="800" height="600">
+          </figure>
+
+          <div class="card-body">
+            <img class="member-avatar" src="../images/tresor.jpg" alt="" aria-hidden="true" width="96" height="96">
+            <h3 id="member-3-name" class="card-title mb-1">Trésor</h3>
+            <p class="role text-muted mb-2">Secretary</p>
+
+            <div class="social-links" aria-label="Secretary social links"></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm committee-card" tabindex="0" aria-labelledby="member-4-name">
+          <figure class="card-image" aria-hidden="true">
+            <img src="../images/hope.jpg" alt="Hope — Public Relations" loading="lazy" decoding="async" width="800" height="600">
+          </figure>
+
+          <div class="card-body">
+            <img class="member-avatar" src="../images/hope.jpg" alt="" aria-hidden="true" width="96" height="96">
+            <h3 id="member-4-name" class="card-title mb-1">Hope</h3>
+            <p class="role text-muted mb-2">Public Relations</p>
+
+            <div class="social-links" aria-label="P.R social links"></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  :root{
+    --card-radius: 8px;
+    --card-gap: 0.75rem;
+    --avatar-size: clamp(64px, 12vw, 104px);
+  }
+
+  /* Mobile-first */
+  #committee-section .committee-card{
+    display:flex;
+    flex-direction:column;
+    border-radius:var(--card-radius);
+    border:0;
+    overflow:hidden;
+    transition:transform .22s ease, box-shadow .22s ease;
+    background:#fff;
+    cursor:pointer;
+  }
+
+  /* keep hero images proportional across widths */
+  #committee-section .card-image{
+    width:100%;
+    aspect-ratio: 16/9;
+    overflow:hidden;
+    background:#e9ecef;
+    flex:0 0 auto;
+  }
+
+  #committee-section .card-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    display:block;
+  }
+
+  #committee-section .card-body{
+    padding:1rem;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:.5rem;
+    text-align:center;
+  }
+
+  /* responsive avatar */
+  #committee-section .member-avatar{
+    width:var(--avatar-size);
+    height:var(--avatar-size);
+    object-fit:cover;
+    border-radius:50%;
+    border:3px solid rgba(255,255,255,0.95);
+    margin-top:calc(var(--avatar-size) * -0.45);
+    background:#fff;
+    box-shadow:0 6px 16px rgba(0,0,0,0.08);
+  }
+
+  /* make sure overlap never pushes content off-screen on very small devices */
+  @media (max-width:360px){
+    #committee-section .member-avatar{
+      width:64px;
+      height:64px;
+      margin-top:-34px;
+    }
+    #committee-section .card-body{
+      padding:.75rem;
+    }
+  }
+
+  .card-title{ font-size:1.05rem; margin:0; }
+  .role{ font-size:.92rem; color:#6c757d; margin:0; }
+
+  .social-links{
+    display:flex;
+    gap:.5rem;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:.25rem;
+  }
+  .social-links a{ color:#0d6efd; text-decoration:none; font-size:1.15rem; }
+
+  .committee-card:hover,
+  .committee-card:focus{
+    transform:translateY(-6px);
+    box-shadow:0 14px 30px rgba(0,0,0,0.12);
+    outline:none;
+  }
+
+  .committee-card:focus{
+    box-shadow:0 0 0 4px rgba(13,110,253,0.12), 0 12px 30px rgba(0,0,0,0.08);
+  }
+
+  /* Medium screens: 2-3 columns handled by bootstrap grid; refine card internals */
+  @media (min-width:576px){
+    #committee-section .card-body{ padding:1rem; }
+  }
+
+  /* Larger tablets and small desktops: make card horizontal for more visual variety */
+  @media (min-width:900px){
+    #committee-section .committee-card{
+      flex-direction:row;
+      align-items:stretch;
+    }
+
+    #committee-section .card-image{
+      flex:0 0 55%;
+      aspect-ratio: auto;
+      min-height:220px;
+    }
+
+    #committee-section .card-image img{
+      height:100%;
+      width:100%;
+      object-fit:cover;
+    }
+
+    #committee-section .card-body{
+      flex:1 1 45%;
+      text-align:left;
+      align-items:flex-start;
+      justify-content:center;
+      padding:1.25rem;
+      gap:.5rem;
+    }
+
+    /* avatar becomes smaller and positioned to left within body for horizontal layout */
+    #committee-section .member-avatar{
+      margin-top:0;
+      transform:translateY(0);
+      width:clamp(72px, 9vw, 96px);
+      height:clamp(72px, 9vw, 96px);
+      margin-right:0.75rem;
+    }
+
+    /* layout header + avatar horizontally */
+    #committee-section .card-body{
+      display:flex;
+      flex-direction:column;
+    }
+    #committee-section .card-body .meta-row{
+      display:flex;
+      align-items:center;
+      gap:.75rem;
+    }
+  }
+
+  /* very large screens: increase image proportion for visual balance */
+  @media (min-width:1300px){
+    #committee-section .card-image{ flex-basis:60%; }
+  }
+</style>
+
+<!-- Font Awesome (load only if you use actual icons) -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<meta name="description" content="Meet the committee of the Congolese Community in Malaysia.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
