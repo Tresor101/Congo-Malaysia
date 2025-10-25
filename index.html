@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Congolese Community in Malaysia</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="images/flags.jpg">
+  <link rel="shortcut icon" type="image/jpeg" href="images/flags.jpg">
+  <link rel="apple-touch-icon" href="images/flags.jpg">
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -29,7 +35,7 @@
     <!-- Gallery Section -->
     <div id="gallery-section"></div>
     
-    <!-- Gallery Section -->
+    <!-- Committee Section -->
     <div id="committee-section"></div>
 
     <!-- Contact Section 
@@ -39,8 +45,131 @@
   <!-- Footer -->
   <div id="footer-placeholder"></div>
 
+  <!-- Scroll to Top Button -->
+  <button id="scroll-to-top" class="scroll-to-top-btn" aria-label="Scroll to top" title="Back to top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="main.js"></script>
+
+  <!-- Scroll to Top Script -->
+  <script>
+    // Scroll to Top functionality
+    const scrollToTopBtn = document.getElementById('scroll-to-top');
+    
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.add('show');
+      } else {
+        scrollToTopBtn.classList.remove('show');
+      }
+    });
+    
+    // Scroll to top on click
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+
+  <!-- Scroll to Top Button Styles -->
+  <style>
+    .scroll-to-top-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #007bff, #00d4ff);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      z-index: 1000;
+    }
+
+    .scroll-to-top-btn.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .scroll-to-top-btn:hover {
+      background: linear-gradient(135deg, #0056b3, #007bff);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 123, 255, 0.6);
+    }
+
+    .scroll-to-top-btn:active {
+      transform: translateY(-2px);
+    }
+
+    .scroll-to-top-btn svg {
+      transition: transform 0.3s ease;
+    }
+
+    .scroll-to-top-btn:hover svg {
+      transform: translateY(-3px);
+      animation: bounce 0.6s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(-3px);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+      .scroll-to-top-btn {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+      }
+
+      .scroll-to-top-btn svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    /* Accessibility - Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .scroll-to-top-btn,
+      .scroll-to-top-btn svg {
+        transition: none !important;
+        animation: none !important;
+      }
+
+      .scroll-to-top-btn:hover svg {
+        animation: none !important;
+      }
+    }
+
+    /* Focus state for accessibility */
+    .scroll-to-top-btn:focus {
+      outline: 3px solid #007bff;
+      outline-offset: 3px;
+    }
+  </style>
 </body>
 </html>
