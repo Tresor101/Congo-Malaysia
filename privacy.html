@@ -4,35 +4,601 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Privacy Policy – Congolese Community in Malaysia</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="images/flags.jpg">
+  <link rel="shortcut icon" type="image/jpeg" href="images/flags.jpg">
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="styles.css" />
+  
+  <style>
+    :root {
+      --primary-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      --accent-blue: #007bff;
+      --accent-cyan: #00d4ff;
+      --accent-green: #28a745;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .privacy-header {
+      background: var(--primary-gradient);
+      color: white;
+      padding: 4rem 0 3rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .privacy-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan));
+    }
+
+    .privacy-header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .breadcrumb-custom {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50px;
+      padding: 0.75rem 1.5rem;
+      display: inline-flex;
+      align-items: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .breadcrumb-custom a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .breadcrumb-custom a:hover {
+      color: white;
+    }
+
+    .breadcrumb-custom .separator {
+      margin: 0 0.75rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .privacy-container {
+      background: white;
+      border-radius: 16px;
+      padding: 3rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      margin-bottom: 3rem;
+    }
+
+    .meta-info {
+      background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+      border-left: 4px solid var(--accent-blue);
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+
+    .meta-info .icon {
+      color: var(--accent-blue);
+      margin-right: 0.5rem;
+    }
+
+    .intro-text {
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background: #f8f9fa;
+      border-radius: 8px;
+      border-left: 4px solid var(--accent-green);
+    }
+
+    .section-title {
+      color: #1a1a2e;
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #e0e0e0;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .section-number {
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+      color: white;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .privacy-container p {
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+
+    .privacy-container ul {
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .privacy-container ul li {
+      margin-bottom: 0.75rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .privacy-container ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--accent-green);
+      font-weight: bold;
+    }
+
+    .info-box {
+      background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+      border-left: 4px solid var(--accent-green);
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
+
+    .info-box .icon {
+      color: var(--accent-green);
+      font-size: 1.5rem;
+      margin-right: 0.75rem;
+    }
+
+    .warning-box {
+      background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+      border-left: 4px solid #ffc107;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
+
+    .warning-box .icon {
+      color: #ffc107;
+      font-size: 1.5rem;
+      margin-right: 0.75rem;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+      border: 2px solid var(--accent-blue);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .contact-box h3 {
+      color: #1a1a2e;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      color: #555;
+      font-weight: 500;
+    }
+
+    .contact-item i {
+      color: var(--accent-blue);
+      font-size: 1.2rem;
+    }
+
+    .btn-home {
+      background: linear-gradient(45deg, var(--accent-blue), var(--accent-cyan));
+      color: white;
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+      border: none;
+    }
+
+    .btn-home:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 123, 255, 0.5);
+      color: white;
+    }
+
+    .btn-whatsapp {
+      background: linear-gradient(45deg, #25D366, #128C7E);
+      color: white;
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+      border: none;
+    }
+
+    .btn-whatsapp:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+      color: white;
+    }
+
+    .footer-note {
+      text-align: center;
+      color: #888;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e0e0e0;
+      font-size: 0.95rem;
+    }
+
+    .privacy-commitment {
+      background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .privacy-commitment .icon {
+      font-size: 3rem;
+      color: #9c27b0;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .privacy-header h1 {
+        font-size: 2rem;
+      }
+
+      .privacy-container {
+        padding: 2rem 1.5rem;
+      }
+
+      .section-title {
+        font-size: 1.25rem;
+      }
+
+      .contact-info {
+        gap: 0.75rem;
+      }
+
+      .contact-item {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Scroll to top button */
+    .scroll-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+      color: white;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    .scroll-to-top.show {
+      display: flex;
+    }
+
+    .scroll-to-top:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 123, 255, 0.6);
+    }
+  </style>
 </head>
-<body class="policy-background">
-
-  <div class="container py-5">
-    <h1 class="mb-4">Privacy Policy</h1>
-
-    <p><strong>Effective Date:</strong> August 2, 2025</p>
-
-    <p>This Privacy Policy explains how we collect, use, and protect your personal information when you use our website.</p>
-
-    <h3>1. Information We Collect</h3>
-    <ul>
-      <li>Contact form data (name, email, message)</li>
-      <li>Non-personal usage statistics (device, browser type, visit duration)</li>
-    </ul>
-
-    <h3>2. How We Use Your Information</h3>
-    <p>We use your data to respond to inquiries and improve the website. We do not sell your information.</p>
-
-    <h3>3. Cookies</h3>
-    <p>This website may use cookies for basic functionality. No tracking is performed.</p>
-
-    <h3>4. Your Consent</h3>
-    <p>By using this website, you consent to this privacy policy.</p>
-
-    <h3>5. Contact</h3>
-    <p>If you have any questions, please use the contact form on the homepage.</p>
+<body>
+  <!-- Header -->
+  <div class="privacy-header">
+    <div class="container">
+      <nav class="breadcrumb-custom mb-3">
+        <a href="index.html">
+          <i class="bi bi-house-door"></i> Home
+        </a>
+        <span class="separator">/</span>
+        <span>Privacy Policy</span>
+      </nav>
+      <h1>
+        <i class="bi bi-shield-lock me-3"></i>
+        Privacy Policy
+      </h1>
+      <p class="lead mb-0">Your Privacy is Our Priority</p>
+    </div>
   </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="privacy-container">
+      <!-- Meta Information -->
+      <div class="meta-info">
+        <p class="mb-2">
+          <i class="bi bi-calendar-check icon"></i>
+          <strong>Effective Date:</strong> August 2, 2025
+        </p>
+        <p class="mb-0">
+          <i class="bi bi-arrow-clockwise icon"></i>
+          <strong>Last Updated:</strong> October 26, 2025
+        </p>
+      </div>
+
+      <!-- Introduction -->
+      <div class="intro-text">
+        <i class="bi bi-info-circle me-2" style="color: var(--accent-green); font-size: 1.5rem;"></i>
+        The <strong>Congolese Community in Malaysia</strong> is committed to protecting your privacy. This Privacy Policy explains our approach to data collection and privacy when you visit our website.
+      </div>
+
+      <!-- Privacy Commitment -->
+      <div class="privacy-commitment">
+        <i class="bi bi-shield-check icon"></i>
+        <h4 class="fw-bold mb-3">Our Privacy Commitment</h4>
+        <p class="mb-0">We respect your privacy completely. <strong>We do not collect, store, track, or share any personal data from visitors to our website.</strong> You can browse our site with complete peace of mind knowing that your privacy is fully protected.</p>
+      </div>
+
+      <!-- Section 1 -->
+      <h3 class="section-title">
+        <span class="section-number">1</span>
+        Information We DO NOT Collect
+      </h3>
+      <p>Our website is designed with privacy in mind. We want to be transparent about what we <strong>do not</strong> collect:</p>
+      <ul>
+        <li><strong>No Personal Information:</strong> We do not collect names, email addresses, phone numbers, or any other personal identifiers</li>
+        <li><strong>No Tracking Cookies:</strong> We do not use cookies or tracking technologies to monitor your browsing behavior</li>
+        <li><strong>No Analytics Data:</strong> We do not collect information about which pages you visit, how long you stay, or how you navigate our site</li>
+        <li><strong>No Technical Data:</strong> We do not collect IP addresses, browser types, device information, or operating system details</li>
+        <li><strong>No Location Data:</strong> We do not track or collect your geographic location</li>
+        <li><strong>No Social Media Tracking:</strong> We do not use social media pixels or tracking codes</li>
+      </ul>
+
+      <div class="info-box">
+        <i class="bi bi-shield-check icon"></i>
+        <strong>100% Privacy Guaranteed:</strong> This is a simple, static website designed to share information about our community. We have no forms, no sign-ups, and no data collection mechanisms.
+      </div>
+
+      <!-- Section 2 -->
+      <h3 class="section-title">
+        <span class="section-number">2</span>
+        How You Can Browse Safely
+      </h3>
+      <p>Your visit to our website is completely anonymous and private:</p>
+      <ul>
+        <li>Browse any page without worrying about being tracked</li>
+        <li>No need to accept cookie banners or privacy notices</li>
+        <li>View photos, read about events, and explore our community freely</li>
+        <li>Your information stays with you - we don't collect anything</li>
+      </ul>
+
+      <!-- Section 3 -->
+      <h3 class="section-title">
+        <span class="section-number">3</span>
+        External Links and Third-Party Content
+      </h3>
+      <p>While we don't collect any data, please be aware of the following:</p>
+      <ul>
+        <li><strong>WhatsApp Links:</strong> When you click on our WhatsApp community group link, you leave our website and enter WhatsApp's platform, which has its own privacy policy</li>
+        <li><strong>Instagram Links:</strong> Clicking on Instagram links will take you to Instagram's platform, governed by Meta's privacy policies</li>
+        <li><strong>Google Drive/Photos:</strong> Event photos hosted on Google services are subject to Google's privacy terms</li>
+        <li><strong>500px Portfolio:</strong> Photography portfolios on 500px are governed by their privacy policy</li>
+      </ul>
+
+      <div class="warning-box">
+        <i class="bi bi-exclamation-triangle icon"></i>
+        <strong>Important:</strong> We are not responsible for the privacy practices of third-party websites and services. Please review their individual privacy policies before sharing any information with them.
+      </div>
+
+      <!-- Section 4 -->
+      <h3 class="section-title">
+        <span class="section-number">4</span>
+        Web Hosting
+      </h3>
+      <p>Our website is hosted on a standard web hosting service. While we don't collect data, your web hosting provider may collect basic server logs for technical purposes. This is standard practice for all websites and is beyond our control. These logs typically include:</p>
+      <ul>
+        <li>IP addresses for security and anti-abuse purposes</li>
+        <li>Basic access logs required for server operation</li>
+        <li>Technical error logs for troubleshooting</li>
+      </ul>
+      <p>These logs are managed by the hosting provider and are not accessible to us for data analysis or marketing purposes.</p>
+
+      <!-- Section 5 -->
+      <h3 class="section-title">
+        <span class="section-number">5</span>
+        Photography and Event Images
+      </h3>
+      <p>Our website displays photos from community events:</p>
+      <ul>
+        <li>Photos are publicly viewable on our website and social media</li>
+        <li>We respect the privacy of individuals in photos</li>
+        <li>If you appear in a photo and wish to have it removed, please contact us</li>
+        <li>We will promptly remove or blur any photos upon request</li>
+        <li>No facial recognition or identification technology is used</li>
+      </ul>
+
+      <!-- Section 6 -->
+      <h3 class="section-title">
+        <span class="section-number">6</span>
+        Contact and Communication
+      </h3>
+      <p>If you choose to contact us through WhatsApp or Instagram:</p>
+      <ul>
+        <li>Communication happens directly on those platforms</li>
+        <li>We only use the information you voluntarily share to respond to your inquiry</li>
+        <li>We do not store contact information in any database</li>
+        <li>Your messages are handled with respect and confidentiality</li>
+        <li>We do not share your contact details with third parties</li>
+      </ul>
+
+      <!-- Section 7 -->
+      <h3 class="section-title">
+        <span class="section-number">7</span>
+        Changes to This Privacy Policy
+      </h3>
+      <p>If we ever decide to collect any data in the future (which is not currently planned), we will:</p>
+      <ul>
+        <li>Update this Privacy Policy with clear information about what data is collected and why</li>
+        <li>Update the "Last Updated" date at the top of this page</li>
+        <li>Announce any significant changes to the community</li>
+        <li>Always maintain transparency about our data practices</li>
+      </ul>
+
+      <!-- Section 8 -->
+      <h3 class="section-title">
+        <span class="section-number">8</span>
+        Your Rights
+      </h3>
+      <p>Since we don't collect any personal data, you don't need to worry about:</p>
+      <ul>
+        <li>Requesting data deletion (there's nothing to delete)</li>
+        <li>Requesting data access (there's nothing to access)</li>
+        <li>Opting out of marketing (we don't do marketing)</li>
+        <li>Managing consent preferences (no consent needed)</li>
+      </ul>
+
+      <div class="info-box">
+        <i class="bi bi-emoji-smile icon"></i>
+        <strong>Simple Privacy:</strong> The best way to protect your privacy is to not collect data in the first place. That's our approach!
+      </div>
+
+      <!-- Section 9 -->
+      <h3 class="section-title">
+        <span class="section-number">9</span>
+        Children's Privacy
+      </h3>
+      <p>Our website is suitable for all ages. Since we don't collect any data from anyone, we also don't collect data from children. Parents can feel confident that their children's privacy is protected when viewing our site.</p>
+
+      <!-- Section 10 -->
+      <h3 class="section-title">
+        <span class="section-number">10</span>
+        Governing Law
+      </h3>
+      <p>This Privacy Policy is governed by the laws of Malaysia. Our commitment to not collecting data exceeds the minimum requirements of most privacy regulations worldwide.</p>
+
+      <!-- Contact Section -->
+      <div class="contact-box">
+        <i class="bi bi-headset" style="font-size: 3rem; color: var(--accent-blue); margin-bottom: 1rem;"></i>
+        <h3>Questions About Our Privacy Practices?</h3>
+        <p>If you have any questions about this Privacy Policy or our commitment to privacy, feel free to reach out.</p>
+        
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="bi bi-person-circle"></i>
+            <span><strong>Website Developer:</strong> Tresor</span>
+          </div>
+          <div class="contact-item">
+            <i class="bi bi-telephone"></i>
+            <span><strong>Phone:</strong> +60 113 792 3985</span>
+          </div>
+          <div class="contact-item">
+            <i class="bi bi-geo-alt"></i>
+            <span><strong>Location:</strong> Kuala Lumpur, Malaysia</span>
+          </div>
+        </div>
+
+        <div class="mt-4 d-flex gap-3 justify-content-center flex-wrap">
+          <a href="https://wa.me/601137923985" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-whatsapp"></i>
+            Contact via WhatsApp
+          </a>
+          <a href="index.html" class="btn-home">
+            <i class="bi bi-arrow-left"></i>
+            Back to Home
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer Note -->
+      <div class="footer-note">
+        <p class="mb-3">
+          <i class="bi bi-shield-check" style="color: var(--accent-green); font-size: 1.5rem;"></i>
+        </p>
+        <p class="mb-2">
+          <strong>Browse with Confidence - Your Privacy is Protected</strong>
+        </p>
+        <p class="text-muted small mb-0">
+          This is a community website built with respect for your privacy. No data collection. No tracking. Just information.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    // Scroll to top functionality
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.add('show');
+      } else {
+        scrollToTopBtn.classList.remove('show');
+      }
+    });
+    
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
 </body>
 </html>
