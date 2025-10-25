@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row g-4">
       <!-- Community Info -->
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-5 col-md-6">
         <h2 class="h5 mb-3 fw-bold">Congolese Community Malaysia</h2>
         <p class="mb-3 text-white-50">
           Building bridges, celebrating culture, and supporting our community in Malaysia.
@@ -38,7 +38,7 @@
       </div>
 
       <!-- Quick Links -->
-      <div class="col-lg-3 col-md-6">
+      <div class="col-lg-4 col-md-6">
         <h3 class="h6 mb-3 fw-bold text-uppercase">Quick Links</h3>
         <nav aria-label="Footer Quick Links">
           <ul class="list-unstyled">
@@ -62,39 +62,17 @@
                 <i class="bi bi-chevron-right me-1"></i> Gallery
               </a>
             </li>
+            <li class="mb-2">
+              <a href="#committee-section" class="text-white-50 text-decoration-none hover-link d-inline-block">
+                <i class="bi bi-chevron-right me-1"></i> Committee
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
 
-      <!-- Community Resources -->
-      <div class="col-lg-3 col-md-6">
-        <h3 class="h6 mb-3 fw-bold text-uppercase">Resources</h3>
-        <ul class="list-unstyled">
-          <li class="mb-2">
-            <a href="#" class="text-white-50 text-decoration-none hover-link d-inline-block">
-              <i class="bi bi-chevron-right me-1"></i> Community Guidelines
-            </a>
-          </li>
-          <li class="mb-2">
-            <a href="#" class="text-white-50 text-decoration-none hover-link d-inline-block">
-              <i class="bi bi-chevron-right me-1"></i> Member Support
-            </a>
-          </li>
-          <li class="mb-2">
-            <a href="#" class="text-white-50 text-decoration-none hover-link d-inline-block">
-              <i class="bi bi-chevron-right me-1"></i> FAQ
-            </a>
-          </li>
-          <li class="mb-2">
-            <a href="#" class="text-white-50 text-decoration-none hover-link d-inline-block">
-              <i class="bi bi-chevron-right me-1"></i> Contact Us
-            </a>
-          </li>
-        </ul>
-      </div>
-
       <!-- Legal -->
-      <div class="col-lg-2 col-md-6">
+      <div class="col-lg-3 col-md-6">
         <h3 class="h6 mb-3 fw-bold text-uppercase">Legal</h3>
         <ul class="list-unstyled">
           <li class="mb-2">
@@ -105,11 +83,6 @@
           <li class="mb-2">
             <a href="privacy.html" class="text-white-50 text-decoration-none hover-link d-inline-block">
               <i class="bi bi-chevron-right me-1"></i> Privacy Policy
-            </a>
-          </li>
-          <li class="mb-2">
-            <a href="#" class="text-white-50 text-decoration-none hover-link d-inline-block">
-              <i class="bi bi-chevron-right me-1"></i> Cookie Policy
             </a>
           </li>
         </ul>
@@ -329,7 +302,7 @@
     }, observerOptions);
 
     // Observe footer sections
-    document.querySelectorAll('.footer .col-lg-4, .footer .col-lg-3, .footer .col-lg-2').forEach(el => {
+    document.querySelectorAll('.footer .col-lg-5, .footer .col-lg-4, .footer .col-lg-3').forEach(el => {
       observer.observe(el);
     });
   });
